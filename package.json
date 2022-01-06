@@ -36,8 +36,7 @@
     "asarUnpack": "**\\*.{node,dll}",
     "files": [
       "dist",
-      "node_modules",
-      "package.json"
+      "node_modules"
     ],
     "afterSign": ".erb/scripts/notarize.js",
     "mac": {

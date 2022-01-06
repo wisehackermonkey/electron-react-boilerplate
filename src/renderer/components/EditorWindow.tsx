@@ -11,16 +11,16 @@ const options = {
 
 export default function EditorWindow() {
 
-  let [editor, setEditor] = useState(null)
+  const [editor, setEditor] = useState(null)
 
 
-  let onChange = (editor_text, e) => {
+  const onChange = (editor_text, e) => {
     console.log('onChange', editor_text, e);
 
     localStorage.editorSavedText = editor_text;
   }
 
-  let monacoEditorLoaded = (__editor__, monaco) => {
+  const monacoEditorLoaded = (__editor__, monaco) => {
     console.log("__Editor__ loaded")
     __editor__.focus();
     setEditor(__editor__)
@@ -42,7 +42,7 @@ export default function EditorWindow() {
                       // options={options}
 
                       onChange={onChange}
-                      // editorDidMount={monacoEditorLoaded}
+                      editorDidMount={monacoEditorLoaded}
                       // theme="myCoolTheme"
                     />
     </>

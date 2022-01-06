@@ -1,6 +1,5 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import icon from '../../assets/icon.svg';
-import './App.css';
+ import './App.css';
 import Layout from './Layout';
 import EditorWindow from './components/EditorWindow';
 const Main = () => {
